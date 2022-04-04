@@ -1,0 +1,8 @@
+NERDTre|NERDTreeToggle|around
+Lime|Limelight|around
+b|better|around
+wi|will|around
+tomorow|tomorrow|around
+NERD|NERDTree|around
+dev|devicons|around
+cur|cursor|around
