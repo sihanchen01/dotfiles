@@ -1,27 +1,13 @@
-set relativenumber
-set number
-set mouse=a
-set autoindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set scrolloff=5
-set smarttab
-set autochdir
-set splitright
-set splitbelow
-set lazyredraw
-" For regular expression
-set magic
-
-" Turn on the wildmenu
-set wildmenu
-
-" Optimize search function
-set ignorecase
-set smartcase
-set incsearch
-
+:set relativenumber
+:set number
+:set mouse=a
+:set autoindent
+:set so=5
+:set tabstop=4
+:set shiftwidth=4
+:set softtabstop=4
+:set smarttab
+:set autochdir
 
 """"""""""""""""""""""""""""""
 " => leader key
@@ -31,7 +17,7 @@ let g:mapleader = ','
 
 " Remove time delay between cursor chaning
 set ttimeout
-set ttimeoutlen=500
+set ttimeoutlen=1
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 
 " Fast saving
@@ -47,12 +33,9 @@ map <leader><cr> :noh<cr>
 " Refresh NERDTree
 map <leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
-" Quickly open/reload vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>  
+" Quickly open/reload vim
+nnoremap <leader>ev :split $MYVIMRC<CR>  
 nnoremap <leader>sv :source $MYVIMRC<CR> 
-
-" Open FZF
-nmap <leader>f :FZF<cr> 
 
 
 """""""""""""""""""""""""""""""
@@ -87,22 +70,6 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif
 
 
 """"""""""""""""""""""""""""""""
@@ -151,10 +118,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'    
     " Limelight
     Plug 'junegunn/limelight.vim'    
-    " FZF
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-
 call plug#end()
 
 

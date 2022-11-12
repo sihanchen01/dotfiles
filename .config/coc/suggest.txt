@@ -1,3 +1,8 @@
+redi|RedirectResponse|around
+Group|GroupSerializer|buffer
+User|UserSerializer|buffer
+se|serializers|around
+rest|rest_framework|around
 NERDTre|NERDTreeToggle|around
 Lime|Limelight|around
 b|better|around
