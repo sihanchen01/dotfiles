@@ -1,0 +1,3 @@
+inoremap kj <esc>
+:set number
+:set relativenumber
