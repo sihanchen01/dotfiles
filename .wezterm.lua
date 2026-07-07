@@ -3,6 +3,7 @@ local wezterm = require 'wezterm'
 
 -- Hold the configuration
 local config = wezterm.config_builder()
+local act = wezterm.action
 
 -- Set preferred font & size
 config.font = wezterm.font 'Agave Nerd Font'
@@ -17,7 +18,7 @@ config.window_padding = {
     bottom = 8,
 }
 
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.86
 config.macos_window_background_blur = 20
 
 config.scrollback_lines = 10000
@@ -39,7 +40,7 @@ config.mouse_bindings = {
 
 config.colors = {
     foreground = '#efefef',
-    background = '#1b2328',
+    background = '#121517',
     cursor_bg = '#ffcb6b',
     cursor_fg = '#000000',
     cursor_border = '#f5e0dc',
